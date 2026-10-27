@@ -1,91 +1,144 @@
-<div align="center">
-  <img src="./app/component/image/profile_image.jpg" alt="Shanto" width="144" />
+# Shanto Portfolio
 
-  <h1>Shanto<span style="color:#AEFF72">.dev</span></h1>
-  <p><strong>Interfaces with intent. Experiences with a little motion.</strong></p>
-  <p>A personal portfolio for selected work, the tools behind it, and the next good collaboration.</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=nextdotjs" alt="Next.js 16" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react" alt="React 19" />
+  <img src="https://img.shields.io/badge/Tailwind-4-06B6D4?style=for-the-badge&logo=tailwindcss" alt="Tailwind CSS 4" />
+  <img src="https://img.shields.io/badge/Status-Portfolio-00C2A8?style=for-the-badge" alt="Portfolio status" />
+</p>
 
-  <p>
-    <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/BUILT_WITH-NEXT.JS-0D2426?style=for-the-badge&logo=next.js&logoColor=AEFF72" alt="Built with Next.js" /></a>
-    <a href="https://react.dev/"><img src="https://img.shields.io/badge/POWERED_BY-REACT-0D2426?style=for-the-badge&logo=react&logoColor=AEFF72" alt="Powered by React" /></a>
-    <img src="https://img.shields.io/badge/STYLE-TAILWIND_CSS-0D2426?style=for-the-badge&logo=tailwindcss&logoColor=AEFF72" alt="Styled with Tailwind CSS" />
-  </p>
-</div>
+<p align="center">
+  <strong>Modern, premium, responsive developer portfolio built with Next.js and motion-rich UI.</strong>
+</p>
+
+<p align="center">
+  <a href="https://nayeemdev-portfolio.vercel.app/">Live Demo</a>
+  ·
+  <a href="#getting-started">Getting Started</a>
+  ·
+  <a href="#project-structure">Project Structure</a>
+</p>
 
 ---
 
-### The idea
+## Overview
 
-This site is a snapshot of how I build for the web: clear layouts, responsive details, and interactions that feel natural. It brings together an introduction, a toolkit, a project carousel, and a direct way to get in touch—all in one place.
+This portfolio showcases a personal brand with a sleek dark aesthetic, smooth scrolling interactions, animated sections, and a professional layout for projects, skills, and contact information. It is designed for developers and creatives who want a modern digital presence that feels premium and conversion-focused.
 
-<table>
-  <tr>
-    <td width="33%" valign="top"><strong>01 / Meet</strong><br />A short introduction and a little context about the developer.</td>
-    <td width="33%" valign="top"><strong>02 / Explore</strong><br />Skills and selected projects, with source and live-preview links.</td>
-    <td width="33%" valign="top"><strong>03 / Connect</strong><br />A contact form that sends messages over Gmail SMTP.</td>
-  </tr>
-</table>
+## Highlights
 
-### The toolkit
+- Premium hero section with strong personal branding
+- Motion-heavy UI using GSAP and scroll-based animation
+- Responsive layout for desktop, tablet, and mobile
+- Skills, experience, and project presentation sections
+- Contact form powered by Nodemailer
+- Clean modern design system with soft gradients and glass-like visuals
 
-| What | Stack |
-| --- | --- |
-| Foundation | Next.js 16 · React 19 |
-| UI | JavaScript · TypeScript · Tailwind CSS 4 |
-| Movement | Framer Motion · GSAP · Lenis |
-| Project showcase | Swiper · React Fast Marquee |
-| Icons & email | Lucide React · React Icons · Nodemailer |
+## Tech Stack
 
-### Run it locally
+- Next.js 16
+- React 19
+- Tailwind CSS 4
+- GSAP
+- Lenis smooth scroll
+- Nodemailer
+- Lucide icons and React Icons
+
+## Project Structure
+
+```bash
+portfolio-main/
+├── app/
+│   ├── api/
+│   │   └── contact/
+│   │       └── route.js
+│   ├── component/
+│   │   ├── animations/
+│   │   ├── Body.js
+│   │   ├── Footer.js
+│   │   ├── HeroPage.js
+│   │   ├── NavBar.js
+│   │   └── ...
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── LenisProvider.js
+│   └── page.tsx
+├── public/
+│   └── Nayeem_Frontend_Developer_CV.pdf
+├── .gitignore
+├── eslint.config.mjs
+├── next.config.ts
+├── package.json
+├── postcss.config.mjs
+├── tsconfig.json
+├── README.md
+└── package-lock.json
+```
+
+## Getting Started
+
+1. Clone the repository
 
 ```bash
 git clone https://github.com/webdevshanto/shanto-portfolio.git
 cd shanto-portfolio
+```
+
+2. Install dependencies
+
+```bash
 npm install
+```
+
+3. Run the app locally
+
+```bash
 npm run dev
 ```
 
-Visit [localhost:3000](http://localhost:3000) and take a look around.
+Open http://localhost:3000 in your browser.
 
-<details>
-  <summary><strong>Set up the contact form</strong></summary>
+## Environment Variables
 
-  The contact endpoint sends email through Gmail SMTP. Create `.env.local` in the project root and add a Gmail address and [Google App Password](https://support.google.com/accounts/answer/185833):
-
-  ```env
-  EMAIL_USER=your-email@gmail.com
-  EMAIL_PASS=your-gmail-app-password
-  ```
-
-  Restart the dev server after saving. Keep these credentials private; `.env.local` is git-ignored.
-</details>
-
-### Useful commands
+For the contact form to work, add the following environment variables in a `.env.local` file:
 
 ```bash
-npm run dev      # Start the local development server
-npm run build    # Create a production build
-npm run start    # Serve the production build
-npm run lint     # Run ESLint
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-password
 ```
 
-### Where things live
+> If you are using Gmail, generate an App Password from your Google account security settings.
 
-```text
-app/
-├── api/contact/       Contact form endpoint
-├── component/         Portfolio sections and UI
-├── globals.css        Global styles
-├── layout.tsx         Root layout and metadata
-└── page.tsx           Home page
-public/                Static files, including the CV
+## Available Scripts
+
+```bash
+npm run dev    # starts local development server
+npm run build  # creates production build
+npm run start  # runs production build
+npm run lint   # runs ESLint checks
 ```
+
+## Deployment
+
+This project is ready for deployment on platforms like:
+
+- Vercel
+- Netlify
+- Railway
+- Any Node.js-compatible hosting provider
+
+For Vercel, the app can be deployed directly from the repository with zero additional configuration.
+
+## License
+
+This project is available for personal and portfolio use. Please respect the original work and do not reuse the design/assets commercially without permission.
+
+## Contact
+
+If you want to connect or collaborate, reach out through the contact form on the live site or via your preferred social/platform channels.
 
 ---
 
-<div align="center">
-  <p><strong>Have something interesting in mind?</strong></p>
-  <a href="mailto:webdevshanto2007@outlook.com">Let's make it happen ↗</a>
-  <br /><br />
-  <sub>Designed and built by Shanto · Next.js, React & a bit of motion</sub>
-</div>
+<p align="center">
+  <i>Built with passion for clean code, smooth UX, and memorable digital experiences.</i>
+</p>
