@@ -1,0 +1,124 @@
+"use client";
+
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaHeart, FaInstagram } from "react-icons/fa"
+import { motion } from "framer-motion"
+import { FaCode } from "react-icons/fa";
+
+const Footer = () => {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
+  const socialLinks = [
+    { icon: FaGithub, href: "https://github.com/Nayeem0011", label: "GitHub" },
+    { icon: FaLinkedin, href: "https://www.linkedin.com/in/nayeem-11bd/", label: "LinkedIn" },
+    { icon: FaTwitter, href: "https://x.com/developernayeem", label: "Twitter" },
+    { icon: FaInstagram, href: "https://www.instagram.com/developernayeem", label: "Instagram" },
+    { icon: FaEnvelope, href: "https://mail.google.com/mail/?view=cm&fs=1&to=sknayeemislam384@gmail.com", label: "Email" }
+  ]
+
+  return (
+    <footer className="w-full bg-[#1f2937] text-white mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          {/* Brand */}
+          <div
+            className="col-span-1 md:col-span-2"
+            onClick={() => scrollToSection('home')}
+          >
+            <div className="flex items-center gap-2 cursor-pointer mb-4">
+              <FaCode className="text-secondary text-xl" />
+              <span className="text-xl md:text-2xl font-bold text-white tracking-wide">
+                Nayeem<span className="text-secondary">.dev</span>
+              </span>
+            </div>
+            <p className="text-gray-300 mb-4 max-w-md text-[12px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px]">
+              Front-End Developer building fast, responsive websites and web apps with React &amp; Next.js. Let&apos;s build something amazing together!
+            </p>
+            <div className="flex gap-2 sm:gap-3 md:gap-4">
+              {socialLinks.map((social, index) => (
+                <motion.div
+                  key={index}
+                  className="relative group"
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <a
+                    href={social.href}
+                    target={social.href.startsWith('mailto:') ? '_self' : '_blank'}
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary hover:text-primary transition-all"
+                  >
+                    <social.icon className="text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] 2xl:text-[20px]" />
+                  </a>
+                  {/* Tooltip */}
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-secondary text-primary px-3 py-1 rounded-lg text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+                    {social.label}
+                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-secondary rotate-45"></div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-bold mb-2 sm:mb-3 md:mb-4">Quick Links</h3>
+            <ul className="text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] space-y-2">
+              <li>
+                <button onClick={() => scrollToSection('home')} className="text-gray-300 hover:text-secondary transition-colors cursor-pointer">
+                  Home
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-secondary transition-colors cursor-pointer">
+                  About
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToSection('skills')} className="text-gray-300 hover:text-secondary transition-colors cursor-pointer">
+                  Skills
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToSection('projects')} className="text-gray-300 hover:text-secondary transition-colors cursor-pointer">
+                  Projects
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-bold mb-2 sm:mb-3 md:mb-4">Contact</h3>
+            <ul className="space-y-2 text-gray-300 text-[12px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px]">
+              <li>Kaliganj, Satkhira, Khulna</li>
+              <li>sknayeemislam384@gmail.com</li>
+              <li>+880 1852 705 818</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-white/10 pt-5 sm:pt-6 md:pt-7 lg:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
+          <p className="text-gray-300 text-[12px] md:text-[13px] lg:text-[14px]">
+            Copyright © {new Date().getFullYear()} Nayeem. All rights reserved.
+          </p>
+          <p className="text-gray-300 text-[12px] md:text-[13px] lg:text-[14px] flex items-center gap-2">
+            Made with <motion.span
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <FaHeart className="text-secondary" />
+            </motion.span> by Nayeem
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
