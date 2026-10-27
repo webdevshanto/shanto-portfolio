@@ -1,54 +1,42 @@
 <div align="center">
+  <img src="./app/component/image/profile_image.jpg" alt="Shanto" width="144" />
 
-# Shanto.dev
+  <h1>Shanto<span style="color:#AEFF72">.dev</span></h1>
+  <p><strong>Interfaces with intent. Experiences with a little motion.</strong></p>
+  <p>A personal portfolio for selected work, the tools behind it, and the next good collaboration.</p>
 
-### A modern portfolio for a full-stack developer
-
-Thoughtfully designed, responsive, and brought to life with smooth motion.
-
-<p>
-  <img src="https://img.shields.io/badge/Next.js-16-black?logo=next.js" alt="Next.js 16" />
-  <img src="https://img.shields.io/badge/React-19-149eca?logo=react&logoColor=white" alt="React 19" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-4-06b6d4?logo=tailwindcss&logoColor=white" alt="Tailwind CSS 4" />
-</p>
-
+  <p>
+    <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/BUILT_WITH-NEXT.JS-0D2426?style=for-the-badge&logo=next.js&logoColor=AEFF72" alt="Built with Next.js" /></a>
+    <a href="https://react.dev/"><img src="https://img.shields.io/badge/POWERED_BY-REACT-0D2426?style=for-the-badge&logo=react&logoColor=AEFF72" alt="Powered by React" /></a>
+    <img src="https://img.shields.io/badge/STYLE-TAILWIND_CSS-0D2426?style=for-the-badge&logo=tailwindcss&logoColor=AEFF72" alt="Styled with Tailwind CSS" />
+  </p>
 </div>
 
 ---
 
-## About
+### The idea
 
-Shanto.dev is a personal portfolio showcasing selected projects, development skills, and ways to get in touch. It is built with Next.js and React, with a responsive interface, animated sections, and a working email contact endpoint.
+This site is a snapshot of how I build for the web: clear layouts, responsive details, and interactions that feel natural. It brings together an introduction, a toolkit, a project carousel, and a direct way to get in touch—all in one place.
 
-## Highlights
+<table>
+  <tr>
+    <td width="33%" valign="top"><strong>01 / Meet</strong><br />A short introduction and a little context about the developer.</td>
+    <td width="33%" valign="top"><strong>02 / Explore</strong><br />Skills and selected projects, with source and live-preview links.</td>
+    <td width="33%" valign="top"><strong>03 / Connect</strong><br />A contact form that sends messages over Gmail SMTP.</td>
+  </tr>
+</table>
 
-- **Responsive layout** designed for mobile, tablet, and desktop
-- **About, skills, and project sections** to introduce the developer and their work
-- **Project carousel** with links to project repositories and live previews
-- **Motion effects** powered by Framer Motion
-- **Smooth scrolling** with Lenis, respecting reduced-motion preferences
-- **Contact form** that sends messages through Gmail SMTP
-- **Dark and light theme styling**
+### The toolkit
 
-## Built with
-
-| Area | Technologies |
+| What | Stack |
 | --- | --- |
-| Framework | Next.js 16, React 19 |
-| Language | JavaScript, TypeScript |
-| Styling | Tailwind CSS 4 |
-| Animation & scrolling | Framer Motion, GSAP, Lenis |
-| UI & carousel | Lucide React, React Icons, Swiper, React Fast Marquee |
-| Contact email | Nodemailer |
+| Foundation | Next.js 16 · React 19 |
+| UI | JavaScript · TypeScript · Tailwind CSS 4 |
+| Movement | Framer Motion · GSAP · Lenis |
+| Project showcase | Swiper · React Fast Marquee |
+| Icons & email | Lucide React · React Icons · Nodemailer |
 
-## Getting started
-
-### Requirements
-
-- Node.js 20.9 or later
-- npm
-
-### Install and run
+### Run it locally
 
 ```bash
 git clone https://github.com/webdevshanto/shanto-portfolio.git
@@ -57,46 +45,47 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the site.
+Visit [localhost:3000](http://localhost:3000) and take a look around.
 
-### Configure the contact form
+<details>
+  <summary><strong>Set up the contact form</strong></summary>
 
-The contact API uses Gmail SMTP. Add your Gmail address and an [App Password](https://support.google.com/accounts/answer/185833) to a `.env.local` file in the project root:
+  The contact endpoint sends email through Gmail SMTP. Create `.env.local` in the project root and add a Gmail address and [Google App Password](https://support.google.com/accounts/answer/185833):
 
-```env
-EMAIL_USER=your-email@gmail.com
-EMAIL_PASS=your-gmail-app-password
+  ```env
+  EMAIL_USER=your-email@gmail.com
+  EMAIL_PASS=your-gmail-app-password
+  ```
+
+  Restart the dev server after saving. Keep these credentials private; `.env.local` is git-ignored.
+</details>
+
+### Useful commands
+
+```bash
+npm run dev      # Start the local development server
+npm run build    # Create a production build
+npm run start    # Serve the production build
+npm run lint     # Run ESLint
 ```
 
-Restart the development server after adding the variables. Keep `.env.local` private and never commit real credentials.
-
-## Available scripts
-
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start the development server |
-| `npm run build` | Create a production build |
-| `npm run start` | Serve the production build |
-| `npm run lint` | Run ESLint |
-
-## Project structure
+### Where things live
 
 ```text
 app/
-├── api/contact/       # Contact form email endpoint
-├── component/         # Portfolio sections and UI components
-├── globals.css        # Global styles
-├── layout.tsx         # Root layout and metadata
-└── page.tsx           # Home page
-public/                # Static files
+├── api/contact/       Contact form endpoint
+├── component/         Portfolio sections and UI
+├── globals.css        Global styles
+├── layout.tsx         Root layout and metadata
+└── page.tsx           Home page
+public/                Static files, including the CV
 ```
-
-## Contact
-
-Have a project in mind? Use the contact form on the portfolio or email [webdevshanto2007@outlook.com](mailto:webdevshanto2007@outlook.com).
 
 ---
 
 <div align="center">
-  Made with care by Shanto
+  <p><strong>Have something interesting in mind?</strong></p>
+  <a href="mailto:webdevshanto2007@outlook.com">Let's make it happen ↗</a>
+  <br /><br />
+  <sub>Designed and built by Shanto · Next.js, React & a bit of motion</sub>
 </div>
