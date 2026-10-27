@@ -1,4 +1,5 @@
-# Shanto Portfolio
+<h1 align="center">Shanto</h1>
+<h3 align="center">Full-Stack Developer • UI Engineer • Problem Solver</h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=nextdotjs" alt="Next.js 16" />
@@ -8,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>Full-Stack Developer Portfolio</strong>
+  <strong>Crafting modern digital experiences with clean code, sharp design, and performance-first thinking.</strong>
 </p>
 
 <p align="center">
@@ -17,10 +18,6 @@
   <a href="#getting-started">⚙️ Getting Started</a>
   ·
   <a href="#project-structure">📁 Project Structure</a>
-</p>
-
-<p align="center">
-  A modern, premium, and responsive portfolio built for showcasing projects, skills, and professional identity through a smooth and highly engaging digital experience.
 </p>
 
 ---
