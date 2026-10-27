@@ -121,7 +121,7 @@ const Pagefive = () => {
               <div>
                 <h3 className="text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-bold text-gray-900 dark:text-white mb-0 md:mb-1">Address</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-[12px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px]">
-                  Kaliganj, Satkhira, <br /> Khulna, Bangladesh
+                  Sharif Market, 27 Road, <br /> Gazipura, Tongi, Gazipur
                 </p>
               </div>
             </motion.div>
@@ -139,8 +139,8 @@ const Pagefive = () => {
               </motion.div>
               <div>
                 <h3 className="text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-bold text-gray-900 dark:text-white mb-0 md:mb-1">Phone Number</h3>
-                <a href="tel:+880185270818" className="text-gray-600 text-[12px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] dark:text-gray-400 hover:text-secondary transition-colors">
-                  +880 1852 705 818
+                <a href="tel:+8801570232274" className="text-gray-600 text-[12px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] dark:text-gray-400 hover:text-secondary transition-colors">
+                  +880 1570 232 274
                 </a>
               </div>
             </motion.div>

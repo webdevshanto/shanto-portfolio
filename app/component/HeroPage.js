@@ -60,9 +60,9 @@ const HeroPage = () => {
             }}
             className="text-[26px] sm:text-[30px] md:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[61px] font-bold text-gray-900 dark:text-white leading-tight"
           >
-            Hi, I&apos;m <span className="text-gradient">Nayeem</span>
+            Hi, I&apos;m <span className="text-gradient">Shanto</span>
             <br />
-            <span className="text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[48px]">Front-End Developer</span>
+            <span className="text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[48px]">Full-Stack Developer</span>
           </motion.h1>
 
           {/* Description */}
@@ -73,7 +73,7 @@ const HeroPage = () => {
             }}
             className="text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] text-gray-600 dark:text-gray-400 max-w-xl mx-auto lg:mx-0"
           >
-            I build fast, responsive websites and web apps with React, Next.js, and Tailwind CSS — from landing pages and portfolios to full e-commerce platforms with clean, pixel-perfect UI.
+            I help turn your ideas into websites and apps people enjoy using. From polished pages to the technology behind them, I build reliable features and bring everything together. Whether you need a portfolio or an online store, I focus on making it smooth, useful, and easy to navigate.
           </motion.p>
 
           {/* Buttons */}

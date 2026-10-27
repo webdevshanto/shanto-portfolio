@@ -114,7 +114,7 @@ const Pagetwo = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Who is <span className="text-gradient">Nayeem</span>?
+            Who is <span className="text-gradient">Shanto</span>?
           </motion.h2>
 
           <motion.p
@@ -123,7 +123,7 @@ const Pagetwo = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            &quot;I help businesses grow by crafting creative, high-performance websites that turn ideas into results.&quot;
+            &quot;I turn your business story into a memorable online experience that earns trust and brings customers closer.&quot;
           </motion.p>
 
           <motion.p
@@ -154,8 +154,8 @@ const Pagetwo = () => {
               </motion.div>
               <div>
                 <p className="text-[10px] sm:text-[12px] md:text-[14px] text-gray-500 dark:text-gray-400 -mb-2 sm:-mb-1.5 md:mb-0">Email Us At</p>
-                <a href="mailto:sknayeemislam384@gmail.com" className="text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-semibold text-gray-900 dark:text-white hover:text-secondary transition-colors">
-                  sknayeemislam384@gmail.com
+                <a href="mailto:webdevshanto2007@outlook.com" className="text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-semibold text-gray-900 dark:text-white hover:text-secondary transition-colors">
+                  webdevshanto2007@outlook.com
                 </a>
               </div>
             </motion.div>
@@ -173,8 +173,8 @@ const Pagetwo = () => {
               </motion.div>
               <div>
                 <p className="text-[10px] sm:text-[12px] md:text-[14px] text-gray-500 dark:text-gray-400 -mb-1.5 sm:-mb-1 md:mb-0">Phone Number</p>
-                <a href="tel:+8801852705818" className="text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-semibold text-gray-900 dark:text-white hover:text-secondary transition-colors">
-                  +880 1852 705 818
+                <a href="tel:+8801570232274" className="text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-semibold text-gray-900 dark:text-white hover:text-secondary transition-colors">
+                  +880 1570 232 274
                 </a>
               </div>
             </motion.div>
@@ -196,7 +196,7 @@ const Pagetwo = () => {
                 animate={isInView ? { scale: 1 } : { scale: 0 }}
                 transition={{ duration: 0.5, delay: 0.9, type: "spring" }}
               >
-                03+
+                01+
               </motion.p>
               <p className="text-gray-600 text-[12px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] dark:text-gray-400 font-medium md:mt-2">Years Experience</p>
             </motion.div>

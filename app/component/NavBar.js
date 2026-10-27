@@ -68,7 +68,6 @@ function NavBar() {
           transition={{ type: "spring", stiffness: 120, damping: 20 }}
           className="fixed top-0 left-0 w-full z-50 bg-black/20 backdrop-blur-sm"
         >
-
           <nav className="max-w-7xl mx-auto px-3 py-3 md:px-4 md:py-6 flex justify-between items-center">
             {/* Logo */}
             <div
@@ -77,7 +76,7 @@ function NavBar() {
             >
               <FaCode className="text-secondary text-xl" />
               <span className="text-xl font-bold text-white tracking-wide">
-                Nayeem<span className="text-secondary">.dev</span>
+                Shanto<span className="text-secondary">.dev</span>
               </span>
             </div>
 

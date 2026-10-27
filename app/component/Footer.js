@@ -32,11 +32,11 @@ const Footer = () => {
             <div className="flex items-center gap-2 cursor-pointer mb-4">
               <FaCode className="text-secondary text-xl" />
               <span className="text-xl md:text-2xl font-bold text-white tracking-wide">
-                Nayeem<span className="text-secondary">.dev</span>
+                Shanto<span className="text-secondary">.dev</span>
               </span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md text-[12px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px]">
-              Front-End Developer building fast, responsive websites and web apps with React &amp; Next.js. Let&apos;s build something amazing together!
+              Full-Stack Developer creating useful, easy-to-use websites and apps from start to finish. Let&apos;s bring your next idea to life with care, clarity, and attention to detail!
             </p>
             <div className="flex gap-2 sm:gap-3 md:gap-4">
               {socialLinks.map((social, index) => (
@@ -95,9 +95,9 @@ const Footer = () => {
           <div>
             <h3 className="text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-bold mb-2 sm:mb-3 md:mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-300 text-[12px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px]">
-              <li>Kaliganj, Satkhira, Khulna</li>
-              <li>sknayeemislam384@gmail.com</li>
-              <li>+880 1852 705 818</li>
+              <li>Sharif Market, 27 Road, Gazipura, Tongi, Gazipur</li>
+              <li>webdevshanto2007@outlook.com</li>
+              <li>+880 1570 232 274</li>
             </ul>
           </div>
         </div>
@@ -105,7 +105,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-5 sm:pt-6 md:pt-7 lg:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
           <p className="text-gray-300 text-[12px] md:text-[13px] lg:text-[14px]">
-            Copyright © {new Date().getFullYear()} Nayeem. All rights reserved.
+            Copyright © {new Date().getFullYear()} Shanto. All rights reserved.
           </p>
           <p className="text-gray-300 text-[12px] md:text-[13px] lg:text-[14px] flex items-center gap-2">
             Made with <motion.span
@@ -113,7 +113,7 @@ const Footer = () => {
               transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
             >
               <FaHeart className="text-secondary" />
-            </motion.span> by Nayeem
+            </motion.span> by Shanto
           </p>
         </div>
       </div>
