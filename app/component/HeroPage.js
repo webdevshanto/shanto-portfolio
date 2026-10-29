@@ -73,7 +73,7 @@ const HeroPage = () => {
             }}
             className="text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] text-gray-600 dark:text-gray-400 max-w-xl mx-auto lg:mx-0"
           >
-            I help turn your ideas into websites and apps people enjoy using. From polished pages to the technology behind them, I build reliable features and bring everything together. Whether you need a portfolio or an online store, I focus on making it smooth, useful, and easy to navigate.
+            I build complete web experiences, from easy-to-use interfaces to the systems behind them. I develop APIs, connect databases, and create features like user accounts for websites, online stores, and custom apps that are reliable, smooth, and ready to grow. I focus on thoughtful design and reliable performance.
           </motion.p>
 
           {/* Buttons */}
