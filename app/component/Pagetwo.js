@@ -132,7 +132,7 @@ const Pagetwo = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            Hi, I&apos;m Nayeem, a Front-End Developer specializing in React and Next.js. I convert Figma designs into pixel-perfect, responsive websites, and build landing pages, e-commerce stores, and web applications with clean code and smooth animations. I can help you with UI/UX implementation, API integration, authentication, and full front-end development — from a single landing page to a complete product.
+            Hi, I&apos;m Shanto, a Full-Stack Developer who turns ideas into thoughtful digital products, from the first concept to launch. I build responsive, easy-to-use interfaces, develop reliable APIs, and connect databases and third-party services to create complete web applications. From business websites and online stores to custom platforms, I focus on clean design, smooth performance, and dependable features that can grow with your needs. I enjoy solving real problems and making every interaction feel simple and natural.
           </motion.p>
 
           <motion.div
