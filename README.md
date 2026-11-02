@@ -1,162 +1,128 @@
-<h1 align="center">Shanto</h1>
-<h3 align="center">Full-Stack Developer • UI Engineer • Problem Solver</h3>
+# Shanto Portfolio
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=nextdotjs" alt="Next.js 16" />
-  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react" alt="React 19" />
-  <img src="https://img.shields.io/badge/Tailwind-4-06B6D4?style=for-the-badge&logo=tailwindcss" alt="Tailwind CSS 4" />
-  <img src="https://img.shields.io/badge/Portfolio-Active-00C2A8?style=for-the-badge" alt="Portfolio active" />
-</p>
+Personal portfolio for Shanto, a full-stack developer. The site introduces my work, services, technical skills, selected projects, and contact options.
 
-<p align="center">
-  <strong>Crafting modern digital experiences with clean code, sharp design, and performance-first thinking.</strong>
-</p>
+**Live site:** [shanto-portfolio-eight.vercel.app](https://shanto-portfolio-eight.vercel.app/)
 
-<p align="center">
-  <a href="https://shanto-portfolio-eight.vercel.app/" target="_blank" rel="noreferrer">🌐 Live Demo</a>
-  ·
-  <a href="#getting-started">⚙️ Getting Started</a>
-  ·
-  <a href="#project-structure">📁 Project Structure</a>
-</p>
+## Overview
 
----
+This portfolio is built with Next.js and designed to present a responsive, animated developer profile. Its main sections are:
 
-## ✨ About This Project
+- **Hero:** Introduction, role, and shortcuts to projects and contact.
+- **About:** Profile, background, and contact details.
+- **Services:** Web development, full-stack apps, APIs, e-commerce, interface implementation, and maintenance.
+- **Skills:** Skills grouped by frontend, backend, authentication, database, and tools.
+- **Projects:** A Swiper carousel featuring selected projects, technology tags, and Code/Demo buttons. Add the project URLs in `Projects.js` to enable those buttons.
+- **Contact:** A message form delivered through the contact API.
 
-This portfolio is crafted to represent a polished personal brand with a dark luxury aesthetic, motion-rich storytelling, and conversion-focused sections. It combines strong visual design with clean code architecture to present a professional developer presence online.
+The interface also includes a scrolling skills ticker, responsive navigation, and animated section reveals.
 
-### Highlights
+## Motion and Interactions
 
-- Premium hero section and brand-first layout
-- Smooth scroll experience with Lenis
-- GSAP-powered animation and motion interactions
-- Responsive design optimized for all screen sizes
-- Portfolio sections for expertise, projects, and contact
-- Contact form integration with Nodemailer
-- Modern UI built using Next.js and Tailwind CSS
+- Section headings and cards reveal as they enter the viewport, with staggered timing in the Services, Skills, and Projects sections.
+- Service and skill cards respond to hover with subtle movement, color, shadow, and icon changes.
+- Project cards, technology tags, and action buttons provide hover or press feedback.
+- The hero skills ticker scrolls continuously, and the project carousel advances automatically with swipe and arrow navigation on supported screen sizes.
+- Lenis provides smooth page scrolling, while the navigation menu animates into view on mobile.
 
----
+## Tech Stack
 
-## 🛠️ Tech Stack
+- **Framework:** Next.js App Router, React
+- **Language:** JavaScript and TypeScript
+- **Styling:** Tailwind CSS
+- **Animation and scrolling:** Motion, GSAP ScrollTrigger utilities, and Lenis
+- **Interactive UI:** Swiper and `react-fast-marquee`
+- **Icons:** `react-icons`
+- **Contact email:** Nodemailer with Gmail SMTP
 
-- Next.js 16
-- React 19
-- Tailwind CSS 4
-- GSAP
-- Lenis Smooth Scroll
-- Nodemailer
-- Lucide Icons
-- React Icons
+## Project Structure
 
----
-
-## 📁 Project Structure
-
-```bash
-portfolio-main/
-├── app/
-│   ├── api/
-│   │   └── contact/
-│   │       └── route.js
-│   ├── component/
-│   │   ├── animations/
-│   │   ├── Body.js
-│   │   ├── Footer.js
-│   │   ├── HeroPage.js
-│   │   ├── NavBar.js
-│   │   └── ...
-│   ├── globals.css
-│   ├── layout.tsx
-│   ├── LenisProvider.js
-│   └── page.tsx
-├── public/
-│   └── Nayeem_Frontend_Developer_CV.pdf
-├── .gitignore
-├── eslint.config.mjs
-├── next.config.ts
-├── package.json
-├── postcss.config.mjs
-├── tsconfig.json
-├── README.md
-├── package-lock.json
-└── .next/
+```text
+app/
+  api/
+    contact/
+      route.js            # Contact form email endpoint
+  component/
+    animations/
+      h2Animation.js
+      sectionAnimation.js
+    image/                # Profile and project images
+    About.js
+    Contact.js
+    Footer.js
+    Hero.js
+    Home.js               # Page sections and their order
+    Navbar.js
+    Projects.js           # Project data and carousel
+    Services.js
+    Skills.js
+    SkillTicker.js
+  globals.css
+  layout.tsx              # Metadata, fonts, and global providers
+  LenisProvider.js        # Smooth scrolling setup
+  page.tsx                # App entry page
+public/                   # Static files served from the site root
+eslint.config.mjs
+next.config.ts
+package.json
+postcss.config.mjs
+tsconfig.json
 ```
 
----
+## Requirements
 
-## 🚀 Getting Started
+- Node.js 20.9 or later
+- npm
+- Gmail credentials for the contact form (optional for running the rest of the site)
 
-### 1) Clone the repository
+## Run Locally
+
+Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/webdevshanto/shanto-portfolio.git
 cd shanto-portfolio
-```
-
-### 2) Install dependencies
-
-```bash
 npm install
 ```
 
-### 3) Run locally
+Create a `.env.local` file in the project root to enable email delivery:
+
+```env
+EMAIL_USER=your-gmail-address@gmail.com
+EMAIL_PASS=your-gmail-app-password
+```
+
+Use a Gmail App Password for `EMAIL_PASS`, not your regular account password. Keep `.env.local` private; environment files are excluded by `.gitignore`.
+
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-Then open:
+Open [http://localhost:3000](http://localhost:3000).
 
-```bash
-http://localhost:3000
-```
+## Contact API
 
----
+The contact form sends a `POST` request to `/api/contact`. The route uses Nodemailer and Gmail SMTP, with `EMAIL_USER` and `EMAIL_PASS` read from the server environment. Configure these same variables in your hosting provider to enable the form in production.
 
-## 🔐 Environment Variables
+## Available Scripts
 
-To enable the contact form, create a `.env.local` file in the root directory and add:
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the local development server. |
+| `npm run build` | Create an optimized production build. |
+| `npm run start` | Serve the production build. Run `npm run build` first. |
+| `npm run lint` | Run ESLint. |
 
-```bash
-EMAIL_USER=your-email@gmail.com
-EMAIL_PASS=your-app-password
-```
+## Deployment
 
-> For Gmail, use an App Password instead of your normal account password.
+The app can be deployed to Vercel or another host that supports Next.js. For Vercel, import the repository and use the standard Next.js build settings. Add `EMAIL_USER` and `EMAIL_PASS` to the project's production environment variables if the contact form should send email.
 
----
+## Updating Content
 
-## 📦 Available Scripts
-
-```bash
-npm run dev    # Start the development server
-npm run build  # Build the production app
-npm run start  # Run the production build
-npm run lint   # Run ESLint checks
-```
-
----
-
-## 🌍 Deployment
-
-This project is ready to deploy on modern hosting platforms such as:
-
-- Vercel
-- Netlify
-- Railway
-- Any Node.js-compatible server
-
-For Vercel, it can be deployed directly from the repository with minimal setup.
-
----
-
-## 📬 Contact
-
-If you'd like to collaborate, connect, or discuss a project, use the contact form on the live website or reach out through your preferred communication channel.
-
----
-
-<p align="center">
-  <i>Built with care, creativity, and a strong focus on modern web experiences.</i>
-</p>
+- Edit the introduction and profile content in `app/component/Hero.js` and `app/component/About.js`.
+- Edit service descriptions in `app/component/Services.js`.
+- Edit skill groups in `app/component/Skills.js` and ticker items in `app/component/SkillTicker.js`.
+- Update project information and links in `app/component/Projects.js`.
+- Update contact form presentation in `app/component/Contact.js`.
