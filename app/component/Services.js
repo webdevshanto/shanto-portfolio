@@ -1,8 +1,7 @@
 'use client';
 
 import { FaDatabase, FaLaptopCode, FaPaintBrush, FaRocket, FaServer, FaShoppingCart } from "react-icons/fa";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -50,21 +49,20 @@ const services = [
 ];
 
 const Services = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
-    <section ref={ref} className="w-full max-w-7xl mx-auto pt-20 md:pt-25 lg:pt-35">
+    <section className="w-full max-w-7xl mx-auto pt-20 md:pt-25 lg:pt-35">
       <motion.div
         className="mb-8 sm:mb-10 md:mb-16"
         initial={{ opacity: 0, y: 50 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6 }}
       >
         <motion.div
           className="inline-flex items-center gap-1 md:gap-2 bg-secondary/20 py-1.5 px-2.5 md:py-2 md:px-4 rounded-full mb-3 sm:mb-4 md:mb-5 lg:mb-6"
           initial={{ opacity: 0, scale: 0.8 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
         >
           <motion.span
@@ -78,7 +76,8 @@ const Services = () => {
         <motion.h2
           className="text-[26px] sm:text-[30px] md:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[61px] font-bold text-gray-900 dark:text-white leading-tight mb-4"
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           What I can build <span className="text-secondary">for you</span>
@@ -94,7 +93,8 @@ const Services = () => {
               key={service.number}
               className="group relative overflow-hidden rounded-lg border border-gray-200 bg-white p-5 shadow-sm transition-[border-color,box-shadow] duration-300 ease-out hover:border-secondary/60 dark:border-gray-700 dark:bg-gray-800 sm:p-6 md:p-7"
               initial={{ opacity: 0, y: 28 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.65, delay: 0.08 + index * 0.1, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{
                 y: -6,

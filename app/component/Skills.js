@@ -2,13 +2,9 @@
 
 import { FaReact, FaHtml5, FaGitAlt, FaGithub, FaCss3, FaNodeJs, FaFigma, FaDocker, FaCode, FaServer, FaLock, FaShieldAlt, FaClock } from "react-icons/fa";
 import { SiTailwindcss, SiJavascript, SiNextdotjs, SiTypescript, SiNpm, SiGreensock, SiFramer, SiExpress, SiMongodb, SiFirebase, SiPostgresql, SiVercel, SiPostman, SiRedux, SiBootstrap, SiRedis, SiJsonwebtokens, SiCloudinary, SiNetlify } from "react-icons/si";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const Skills = () => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
-
   const skillGroups = [
     {
       title: "Frontend",
@@ -75,17 +71,19 @@ const Skills = () => {
   ]
 
   return (
-    <section ref={ref} className="w-full max-w-7xl mx-auto pt-20 md:pt-25 lg:pt-35">
+    <section className="w-full max-w-7xl mx-auto pt-20 md:pt-25 lg:pt-35">
       <motion.div
         className="text-left mb-8 sm:mb-10 md:mb-16"
         initial={{ opacity: 0, y: 50 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6 }}
       >
         <motion.div
           className="inline-flex items-center gap-1 md:gap-2 bg-secondary/20 py-1.5 px-2.5 md:py-2 md:px-4 rounded-full mb-3 sm:mb-4 md:mb-5 lg:mb-6"
           initial={{ opacity: 0, scale: 0.8 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
         >
           <motion.span
@@ -106,7 +104,8 @@ const Skills = () => {
         <motion.h2
           className="text-[26px] sm:text-[30px] md:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[61px] font-bold text-gray-900 dark:text-white leading-tight mb-4"
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           Design, develop, deliver: my <span className="text-secondary">essential gear</span>
@@ -119,20 +118,23 @@ const Skills = () => {
             <motion.div
               className="mb-4 sm:mb-5 md:mb-6 flex items-center gap-2.5 sm:gap-4 md:gap-5"
               initial={{ opacity: 0, y: 16 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: 0.2 + groupIndex * 0.15 }}
             >
               <motion.div
                 className="h-px flex-1 bg-gradient-to-r from-transparent via-secondary/50 to-secondary/10"
                 initial={{ scaleX: 0 }}
-                animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 + groupIndex * 0.12 }}
                 style={{ transformOrigin: "right" }}
               />
               <motion.h3
                 className="flex shrink-0 items-center gap-2 rounded-lg border border-secondary/30 bg-white/80 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-secondary shadow-sm backdrop-blur-sm dark:bg-gray-800/80 sm:px-4 sm:py-2 sm:text-[11px] md:text-[12px] lg:text-[13px]"
                 initial={{ opacity: 0, scale: 0.8, y: 6 }}
-                animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.8, y: 6 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ type: "spring", stiffness: 240, damping: 18, delay: 0.25 + groupIndex * 0.12 }}
                 whileHover={{ y: -2, borderColor: "var(--color-secondary)" }}
               >
@@ -146,7 +148,8 @@ const Skills = () => {
               <motion.div
                 className="h-px flex-1 bg-gradient-to-r from-secondary/10 via-secondary/50 to-transparent"
                 initial={{ scaleX: 0 }}
-                animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 + groupIndex * 0.12 }}
                 style={{ transformOrigin: "left" }}
               />
@@ -158,7 +161,8 @@ const Skills = () => {
                   key={`${group.title}-${skill.name}`}
                   className="group relative bg-white dark:bg-gray-800 p-2 sm:p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl lg:rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-secondary overflow-hidden"
                   initial={{ opacity: 0, y: 60, scale: 0.9 }}
-                  animate={isInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 60, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.6, delay: (groupIndex + 1) * 0.08 + index * 0.05, type: "spring", stiffness: 90, damping: 14 }}
                   whileHover={{ y: -10, scale: 1.03 }}
                 >
