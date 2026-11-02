@@ -1,12 +1,11 @@
 'use client';
 
-import { FaGithub, FaExternalLinkAlt, FaEye } from "react-icons/fa"
+import { FaGithub, FaExternalLinkAlt, FaEye, FaChevronLeft, FaChevronRight } from "react-icons/fa"
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+import { Pagination, Autoplay } from 'swiper/modules'
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 import 'swiper/css'
-import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import Image from 'next/image';
 import project1 from './image/project_image_01.png';
@@ -28,6 +27,7 @@ const MotionImage = motion.create(Image);
 
 const Projects = () => {
   const ref = useRef(null)
+  const swiperRef = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   const projects = [
@@ -192,32 +192,35 @@ const Projects = () => {
         </motion.p>
       </motion.div>
 
-      <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        spaceBetween={30}
-        slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
-        loop={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
-        breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        }}
-        className="projects-swiper pb-12!"
-      >
-        {projects.map((project, index) => (
-          <SwiperSlide key={project.title} className="h-auto">
+      <div className="relative">
+        <Swiper
+          modules={[Pagination, Autoplay]}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper
+          }}
+          spaceBetween={30}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          loop={true}
+          autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
+          className="projects-swiper pb-12!"
+        >
+          {projects.map((project, index) => (
+            <SwiperSlide key={project.title} className="h-auto">
             <motion.div className="group relative flex flex-col h-full bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-secondary" >
               {/* Number badge */}
               <div className="absolute top-3 left-3 z-10 w-8 h-8 rounded-full bg-primary/70 backdrop-blur-sm flex items-center justify-center text-secondary text-[12px] font-bold">
@@ -300,9 +303,26 @@ const Projects = () => {
                 </div>
               </div>
             </motion.div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <button
+          type="button"
+          aria-label="Previous project"
+          onClick={() => swiperRef.current?.slidePrev()}
+          className="absolute left-2 top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-secondary/30 bg-primary/90 text-secondary shadow-lg transition duration-200 hover:scale-105 hover:bg-secondary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary sm:left-3 sm:h-11 sm:w-11 lg:hidden"
+        >
+          <FaChevronLeft aria-hidden="true" />
+        </button>
+        <button
+          type="button"
+          aria-label="Next project"
+          onClick={() => swiperRef.current?.slideNext()}
+          className="absolute right-2 top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-secondary/30 bg-primary/90 text-secondary shadow-lg transition duration-200 hover:scale-105 hover:bg-secondary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary sm:right-3 sm:h-11 sm:w-11 lg:hidden"
+        >
+          <FaChevronRight aria-hidden="true" />
+        </button>
+      </div>
     </section>
   );
 };

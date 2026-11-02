@@ -14,7 +14,10 @@ function Navbar() {
   const scrollToSection = (id) => {
     const element = document.getElementById(id)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      const navbarHeight = document.querySelector("header")?.getBoundingClientRect().height ?? 0
+      const targetTop = element.getBoundingClientRect().top + window.scrollY - navbarHeight
+
+      window.scrollTo({ top: Math.max(targetTop, 0), behavior: "smooth" })
       setActiveSection(id)
       setIsMobileMenuOpen(false) // Close mobile menu after clicking
     }
