@@ -1,7 +1,7 @@
 'use client';
 
-import { FaReact, FaHtml5, FaGitAlt, FaGithub, FaCss3, FaNodeJs, FaFigma, FaDocker, FaCode, FaServer, FaLock } from "react-icons/fa";
-import { SiTailwindcss, SiJavascript, SiNextdotjs, SiTypescript, SiSass, SiNpm, SiGreensock, SiFramer, SiExpress, SiMongodb, SiFirebase, SiPostgresql, SiVercel, SiPostman, SiRedux, SiBootstrap, SiRedis, SiJsonwebtokens, SiCloudinary, SiNetlify } from "react-icons/si";
+import { FaReact, FaHtml5, FaGitAlt, FaGithub, FaCss3, FaNodeJs, FaFigma, FaDocker, FaCode, FaServer, FaLock, FaShieldAlt, FaClock } from "react-icons/fa";
+import { SiTailwindcss, SiJavascript, SiNextdotjs, SiTypescript, SiNpm, SiGreensock, SiFramer, SiExpress, SiMongodb, SiFirebase, SiPostgresql, SiVercel, SiPostman, SiRedux, SiBootstrap, SiRedis, SiJsonwebtokens, SiCloudinary, SiNetlify } from "react-icons/si";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -21,7 +21,6 @@ const Pagethree = () => {
         { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-cyan-500" />, color: "from-cyan-400 to-blue-500" },
         { name: "Bootstrap", icon: <SiBootstrap className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-violet-500" />, color: "from-violet-500 to-indigo-600" },
         { name: "Redux", icon: <SiRedux className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-purple-500" />, color: "from-purple-500 to-violet-600" },
-        { name: "Sass & Pug", icon: <SiSass className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-green-500" />, color: "from-green-400 to-green-600" },
         { name: "GSAP", icon: <SiGreensock className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-green-500" />, color: "from-lime-400 to-green-600" },
         { name: "Motion", icon: <SiFramer className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-purple-500" />, color: "from-purple-500 to-pink-500" },
       ],
@@ -34,8 +33,20 @@ const Pagethree = () => {
         { name: "Typescript", icon: <SiTypescript className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-green-600" />, color: "from-green-500 to-green-700" },
         { name: "REST API", icon: <FaServer className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-cyan-500" />, color: "from-cyan-500 to-blue-600" },
         { name: "Redis", icon: <SiRedis className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-red-600" />, color: "from-red-500 to-rose-700" },
+      ],
+    },
+    {
+      title: "Authentication & Authorization",
+      skills: [
         { name: "JWT", icon: <SiJsonwebtokens className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-red-500" />, color: "from-red-500 to-orange-500" },
         { name: "Bcrypt", icon: <FaLock className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-amber-500" />, color: "from-amber-500 to-yellow-600" },
+        { name: "OAuth", icon: <FaLock className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-cyan-500" />, color: "from-cyan-500 to-blue-600" },
+        { name: "Cookie Auth", icon: <FaServer className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-indigo-500" />, color: "from-indigo-500 to-violet-600" },
+        { name: "Middleware", icon: <FaCode className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-violet-500" />, color: "from-violet-500 to-purple-600" },
+        { name: "2FA", icon: <FaLock className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-pink-500" />, color: "from-pink-500 to-rose-600" },
+        { name: "Tokens", icon: <SiJsonwebtokens className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-teal-500" />, color: "from-teal-500 to-cyan-600" },
+        { name: "Security Auth", icon: <FaShieldAlt className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-red-400" />, color: "from-red-400 to-red-600" },
+        { name: "Rate Limiting", icon: <FaClock className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-orange-500" />, color: "from-orange-500 to-red-600" },
       ],
     },
     {
@@ -56,6 +67,7 @@ const Pagethree = () => {
         { name: "VS Code", icon: <FaCode className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-blue-500" />, color: "from-blue-500 to-cyan-500" },
         { name: "Postman", icon: <SiPostman className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-orange-500" />, color: "from-orange-400 to-red-500" },
         { name: "Figma", icon: <FaFigma className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-pink-500" />, color: "from-pink-500 to-violet-500" },
+        { name: "Docker", icon: <FaDocker className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-blue-500" />, color: "from-blue-500 to-cyan-600" },
         { name: "Netlify", icon: <SiNetlify className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-cyan-500" />, color: "from-cyan-500 to-blue-500" },
         { name: "Vercel", icon: <SiVercel className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] text-gray-800" />, color: "from-gray-700 to-gray-900" },
       ],
@@ -104,13 +116,41 @@ const Pagethree = () => {
       <div className="space-y-8 sm:space-y-10 md:space-y-12">
         {skillGroups.map((group, groupIndex) => (
           <div key={group.title}>
-            <div className="mb-4 sm:mb-5 md:mb-6 flex items-center gap-3 sm:gap-4 md:gap-5">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-300 to-gray-200 dark:via-gray-600 dark:to-transparent" />
-              <h3 className="text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] font-semibold uppercase tracking-[0.2em] text-secondary bg-secondary/5 dark:bg-secondary/10 px-2.5 py-1 rounded-full border border-secondary/20 shadow-sm">
+            <motion.div
+              className="mb-4 sm:mb-5 md:mb-6 flex items-center gap-2.5 sm:gap-4 md:gap-5"
+              initial={{ opacity: 0, y: 16 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
+              transition={{ duration: 0.5, delay: 0.2 + groupIndex * 0.15 }}
+            >
+              <motion.div
+                className="h-px flex-1 bg-gradient-to-r from-transparent via-secondary/50 to-secondary/10"
+                initial={{ scaleX: 0 }}
+                animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 + groupIndex * 0.12 }}
+                style={{ transformOrigin: "right" }}
+              />
+              <motion.h3
+                className="flex shrink-0 items-center gap-2 rounded-lg border border-secondary/30 bg-white/80 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-secondary shadow-sm backdrop-blur-sm dark:bg-gray-800/80 sm:px-4 sm:py-2 sm:text-[11px] md:text-[12px] lg:text-[13px]"
+                initial={{ opacity: 0, scale: 0.8, y: 6 }}
+                animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.8, y: 6 }}
+                transition={{ type: "spring", stiffness: 240, damping: 18, delay: 0.25 + groupIndex * 0.12 }}
+                whileHover={{ y: -2, borderColor: "var(--color-secondary)" }}
+              >
+                <motion.span
+                  className="h-1.5 w-1.5 rounded-full bg-secondary"
+                  animate={{ scale: [1, 1.35, 1], opacity: [0.7, 1, 0.7] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: groupIndex * 0.12 }}
+                />
                 {group.title}
-              </h3>
-              <div className="h-px flex-1 bg-gradient-to-r from-gray-200 via-gray-300 to-transparent dark:from-gray-700 dark:via-gray-600 dark:to-transparent" />
-            </div>
+              </motion.h3>
+              <motion.div
+                className="h-px flex-1 bg-gradient-to-r from-secondary/10 via-secondary/50 to-transparent"
+                initial={{ scaleX: 0 }}
+                animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 + groupIndex * 0.12 }}
+                style={{ transformOrigin: "left" }}
+              />
+            </motion.div>
 
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
               {group.skills.map((skill, index) => (

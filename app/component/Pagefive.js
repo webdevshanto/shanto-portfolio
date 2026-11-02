@@ -1,6 +1,7 @@
 'use client';
 
-import { FaMapMarkerAlt, FaPhone, FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa"
+import { FaMapMarkerAlt, FaPhone, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 import { useState, useRef } from "react"
 import { motion, useInView } from "framer-motion"
 
@@ -329,7 +330,7 @@ const Pagefive = () => {
           whileHover={{ scale: 1.2, backgroundColor: "#AEFF72", color: "#0D2426" }}
           whileTap={{ scale: 0.9 }}
         >
-          <FaTwitter className="text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] 2xl:text-[20px]" />
+          <FaXTwitter className="text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] 2xl:text-[20px]" />
         </motion.a>
       </motion.div>
     </section>

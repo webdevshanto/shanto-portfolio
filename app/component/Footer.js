@@ -1,6 +1,7 @@
 "use client";
 
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaHeart, FaInstagram } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaEnvelope, FaHeart, FaInstagram } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 import { motion } from "framer-motion"
 import { FaCode } from "react-icons/fa";
 
@@ -15,7 +16,7 @@ const Footer = () => {
   const socialLinks = [
     { icon: FaGithub, href: "https://github.com/webdevshanto", label: "GitHub" },
     { icon: FaLinkedin, href: "*", label: "LinkedIn" },
-    { icon: FaTwitter, href: "*", label: "Twitter" },
+    { icon: FaXTwitter, href: "*", label: "X" },
     { icon: FaInstagram, href: "https://www.instagram.com/_s_h_shanto_2006_", label: "Instagram" },
     { icon: FaEnvelope, href: "https://mail.google.com/mail/?view=cm&fs=1&to=sksanto2007@gmail.com", label: "Email" }
   ]

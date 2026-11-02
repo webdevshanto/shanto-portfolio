@@ -1,24 +1,48 @@
 'use client';
 
 import Marquee from "react-fast-marquee"
-import { FaReact, FaHtml5, FaGitAlt, FaCss3, FaSass } from "react-icons/fa"
-import { SiTailwindcss, SiJavascript, SiNextdotjs, SiDaisyui, SiTypescript, SiNpm, SiGreensock, SiFramer} from "react-icons/si"
+import { FaReact, FaHtml5, FaGitAlt, FaGithub, FaCss3, FaNodeJs, FaFigma, FaCode, FaServer, FaLock, FaDocker, FaShieldAlt, FaClock } from "react-icons/fa"
+import { SiTailwindcss, SiJavascript, SiNextdotjs, SiTypescript, SiNpm, SiGreensock, SiFramer, SiExpress, SiMongodb, SiFirebase, SiPostgresql, SiPostman, SiRedux, SiBootstrap, SiRedis, SiJsonwebtokens, SiCloudinary, SiNetlify, SiVercel } from "react-icons/si"
 
 const Pageone = () => {
   const skills = [
     { name: "HTML", icon: <FaHtml5 className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
     { name: "CSS3", icon: <FaCss3 className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
-    { name: "JAVASCRIPT", icon: <SiJavascript className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
-    { name: "REACT.JS", icon: <FaReact className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
-    { name: "NEXT.JS", icon: <SiNextdotjs className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
-    { name: "TYPESCRIPT", icon: <SiTypescript className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
-    { name: "TAILWIND CSS", icon: <SiTailwindcss className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
-    { name: "DAISY UI", icon: <SiDaisyui className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
-    { name: "SASS & PUG", icon: <FaSass className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
-    { name: "GIT & GITHUB", icon: <FaGitAlt className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
-    { name: "NPM", icon: <SiNpm className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "JavaScript", icon: <SiJavascript className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "React.js", icon: <FaReact className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Next.js", icon: <SiNextdotjs className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Bootstrap", icon: <SiBootstrap className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Redux", icon: <SiRedux className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
     { name: "GSAP", icon: <SiGreensock className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
-    { name: "MOTION", icon: <SiFramer className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Motion", icon: <SiFramer className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Node.js", icon: <FaNodeJs className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Express.js", icon: <SiExpress className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "TypeScript", icon: <SiTypescript className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "REST API", icon: <FaServer className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Redis", icon: <SiRedis className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "JWT", icon: <SiJsonwebtokens className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Bcrypt", icon: <FaLock className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "OAuth", icon: <FaLock className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Cookie Auth", icon: <FaServer className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Middleware", icon: <FaCode className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "2FA", icon: <FaLock className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Tokens", icon: <SiJsonwebtokens className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Security Auth", icon: <FaShieldAlt className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Rate Limiting", icon: <FaClock className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "MongoDB", icon: <SiMongodb className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "PostgreSQL", icon: <SiPostgresql className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Firebase", icon: <SiFirebase className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Cloudinary", icon: <SiCloudinary className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Git", icon: <FaGitAlt className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "GitHub", icon: <FaGithub className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "NPM", icon: <SiNpm className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "VS Code", icon: <FaCode className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Postman", icon: <SiPostman className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Figma", icon: <FaFigma className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Docker", icon: <FaDocker className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Netlify", icon: <SiNetlify className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
+    { name: "Vercel", icon: <SiVercel className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
   ]
 
   return (

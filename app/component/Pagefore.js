@@ -143,7 +143,7 @@ const Pagefore = () => {
       github: "https://github.com/developernayeemx/cryptex",
       live: "https://cryptex-six.vercel.app/"
     }
-  ]
+  ].slice(0, 3)
 
   return (
     <section ref={ref} className="w-full max-w-7xl mx-auto pt-20 md:pt-25 lg:pt-35">
