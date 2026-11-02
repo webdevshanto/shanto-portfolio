@@ -7,7 +7,7 @@ import { useRef } from "react";
 import Image from 'next/image';
 import profile_image from './image/profile_image.jpg';
 
-const Pagetwo = () => {
+const About = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -226,4 +226,4 @@ const Pagetwo = () => {
   );
 };
 
-export default Pagetwo;
+export default About;

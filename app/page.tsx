@@ -1,11 +1,11 @@
-import Body from "./component/Body";
+import Portfolio from "./component/Home";
 import LenisProvider from "./LenisProvider";
 
 export default function Home() {
   return (
     <>
       <LenisProvider>
-      <Body />
+      <Portfolio />
     </LenisProvider>
     </>
   );

@@ -26,7 +26,7 @@ import project15 from './image/project_image_15.png';
 
 const MotionImage = motion.create(Image);
 
-const Pagefore = () => {
+const Projects = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -307,4 +307,4 @@ const Pagefore = () => {
   );
 };
 
-export default Pagefore;
+export default Projects;

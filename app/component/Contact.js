@@ -5,7 +5,7 @@ import { FaXTwitter } from "react-icons/fa6"
 import { useState, useRef } from "react"
 import { motion, useInView } from "framer-motion"
 
-const Pagefive = () => {
+const Contact = () => {
   const [showSuccess, setShowSuccess] = useState(false)
   const [showError, setShowError] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -337,4 +337,4 @@ const Pagefive = () => {
   );
 };
 
-export default Pagefive;
+export default Contact;

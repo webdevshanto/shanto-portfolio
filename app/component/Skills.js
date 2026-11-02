@@ -5,7 +5,7 @@ import { SiTailwindcss, SiJavascript, SiNextdotjs, SiTypescript, SiNpm, SiGreens
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const Pagethree = () => {
+const Skills = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -190,5 +190,5 @@ const Pagethree = () => {
   );
 };
 
-export default Pagethree;
+export default Skills;
 

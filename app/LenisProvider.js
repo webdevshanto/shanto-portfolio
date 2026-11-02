@@ -5,7 +5,7 @@ import Lenis from "lenis";
 
 const LenisContext = createContext(null);
 
-// Use this hook in NavBar/Footer instead of element.scrollIntoView()
+// Use this hook in Navbar/Footer instead of element.scrollIntoView()
 // so section-scrolling doesn't fight with Lenis's smooth scroll engine.
 // Returns the ref object itself (not .current) - only read `.current`
 // inside an event handler (e.g. onClick), never during render.

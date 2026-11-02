@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee"
 import { FaReact, FaHtml5, FaGitAlt, FaGithub, FaCss3, FaNodeJs, FaFigma, FaCode, FaServer, FaLock, FaDocker, FaShieldAlt, FaClock } from "react-icons/fa"
 import { SiTailwindcss, SiJavascript, SiNextdotjs, SiTypescript, SiNpm, SiGreensock, SiFramer, SiExpress, SiMongodb, SiFirebase, SiPostgresql, SiPostman, SiRedux, SiBootstrap, SiRedis, SiJsonwebtokens, SiCloudinary, SiNetlify, SiVercel } from "react-icons/si"
 
-const Pageone = () => {
+const SkillTicker = () => {
   const skills = [
     { name: "HTML", icon: <FaHtml5 className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
     { name: "CSS3", icon: <FaCss3 className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[30px]" /> },
@@ -64,4 +64,4 @@ const Pageone = () => {
   );
 };
 
-export default Pageone;
+export default SkillTicker;

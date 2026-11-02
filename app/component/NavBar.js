@@ -5,7 +5,7 @@ import { MdMenu, MdClose } from 'react-icons/md'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaCode } from "react-icons/fa";
 
-function NavBar() {
+function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
@@ -32,7 +32,7 @@ function NavBar() {
       { threshold: 0.6 }
     );
 
-    ["home", "about", "skills", "projects", "contact"].forEach((id) => {
+    ["home", "about", "services", "skills", "projects", "contact"].forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
@@ -82,7 +82,7 @@ function NavBar() {
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center space-x-6 text-gray-600 dark:text-gray-300">
-              {["home", "about", "skills", "projects", "contact"].map((section) => (
+              {["home", "about", "services", "skills", "projects", "contact"].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -148,7 +148,7 @@ function NavBar() {
                     }}
                     className="flex flex-col space-y-3"
                   >
-                    {["home", "about", "skills", "projects", "contact"].map((section, index) => (
+                    {["home", "about", "services", "skills", "projects", "contact"].map((section, index) => (
                       <motion.button
                         key={section}
                         onClick={() => scrollToSection(section)}
@@ -194,5 +194,5 @@ function NavBar() {
   )
 }
 
-export default NavBar;
+export default Navbar;
 

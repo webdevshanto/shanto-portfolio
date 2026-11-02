@@ -5,7 +5,7 @@ import profile_image from './image/profile_image.jpg';
 
 import { motion } from 'framer-motion'
 
-const HeroPage = () => {
+const Hero = () => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id)
     if (element) {
@@ -193,6 +193,6 @@ const HeroPage = () => {
   );
 };
 
-export default HeroPage;
+export default Hero;
 
 

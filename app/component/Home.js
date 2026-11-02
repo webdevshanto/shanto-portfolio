@@ -1,37 +1,41 @@
 'use client';
 
-import HeroPage from './HeroPage';
-import NavBar from './NavBar';
-import Pageone from './Pageone';
-import Pagetwo from './Pagetwo';
-import Pagethree from './Pagethree';
-import Pagefore from './Pagefore';
-import Pagefive from './Pagefive';
+import Hero from './Hero';
+import Navbar from './Navbar';
+import SkillTicker from './SkillTicker';
+import About from './About';
+import Services from './Services';
+import Skills from './Skills';
+import Projects from './Projects';
+import Contact from './Contact';
 import Footer from './Footer';
 
-const Body = () => {
+const Home = () => {
     return (
         <div className="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
             <div className="min-h-screen flex flex-col">
                 <div className="sticky top-0 z-50">
-                    <NavBar />
+                    <Navbar />
                 </div>
                 <div id="home" className="px-4 sm:px-6 lg:px-8">
-                    <HeroPage />
+                    <Hero />
                 </div>
-                <Pageone />
+                <SkillTicker />
                 <div className="px-4 sm:px-6 lg:px-8">
                     <div id="about">
-                        <Pagetwo />
+                        <About />
+                    </div>
+                    <div id="services">
+                        <Services />
                     </div>
                     <div id="skills">
-                        <Pagethree />
+                        <Skills />
                     </div>
                     <div id="projects">
-                        <Pagefore />
+                        <Projects />
                     </div>
                     <div id="contact">
-                        <Pagefive />
+                        <Contact />
                     </div>
                 </div>
                 <Footer />
@@ -40,6 +44,6 @@ const Body = () => {
     );
 };
 
-export default Body;
+export default Home;
 
 
