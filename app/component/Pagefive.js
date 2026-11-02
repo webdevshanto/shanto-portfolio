@@ -292,7 +292,7 @@ const Pagefive = () => {
         transition={{ duration: 0.6, delay: 0.6 }}
       >
         <motion.a
-          href="https://github.com/Nayeem0011"
+          href="https://github.com/webdevshanto"
           target="_blank"
           rel="noopener noreferrer"
           className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-lg"
@@ -302,7 +302,7 @@ const Pagefive = () => {
           <FaGithub className="text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] 2xl:text-[20px]" />
         </motion.a>
         <motion.a
-          href="https://www.linkedin.com/in/nayeem-11bd/"
+          href="*"
           target="_blank"
           rel="noopener noreferrer"
           className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-lg"
@@ -312,7 +312,7 @@ const Pagefive = () => {
           <FaLinkedin className="text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] 2xl:text-[20px]" />
         </motion.a>
         <motion.a
-          href="https://www.instagram.com/developernayeem/"
+          href="https://www.instagram.com/_s_h_shanto_2006_/"
           target="_blank"
           rel="noopener noreferrer"
           className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-lg"
@@ -322,7 +322,7 @@ const Pagefive = () => {
           <FaInstagram className="text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] 2xl:text-[20px]" />
         </motion.a>
         <motion.a
-          href="https://x.com/developernayeem"
+          href="*"
           target="_blank"
           rel="noopener noreferrer"
           className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-lg"
