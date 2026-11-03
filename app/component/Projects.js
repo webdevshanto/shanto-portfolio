@@ -24,11 +24,11 @@ const Projects = () => {
       live: "https://shanto-portfolio-dev.vercel.app/"
     },
     {
-      title: "Genesis Landing Page",
-      description: "A modern landing page converted from a design into a live website. Focused on clean layout, smooth sections, and visual consistency.",
-      tech: ["React", "CSS", "Tailwind"],
-      github: "",
-      live: ""
+      title: "E-Commerce Platform",
+      description: "A full-stack e-commerce platform with user authentication, product management, and payment integration. Built with React, Node.js, Express, and PostgreSQL.",
+      tech: ["React", "Tailwind", "Node.js", "Express", "JWT", "PostgreSQL", "NeonDB", "Cloudinary"],
+      github: "https://github.com/management-system-client-app/E-Commerce-Fontend",
+      live: "https://e-commerce-fontend-mu.vercel.app/"
     },
     {
       title: "Business Landing Page",
@@ -37,83 +37,6 @@ const Projects = () => {
       image: landingPagePreview,
       github: "https://github.com/webdevshanto/modern-business-landing-page",
       live: "https://modern-business-landing-page-gamma-tan.vercel.app/"
-    },
-    {
-      title: "E-commerce Shop",
-      description: "A fully functional online store built with React and Tailwind CSS, featuring user authentication, cart management, address handling, and API integration.",
-      tech: ["React", "API", "Router", "State management"],
-      github: "https://github.com/developernayeemx/SPRWFORGE_ONLINE_SHOPPING_PROJECT",
-      live: "https://sprwforge-online-shopping-project.vercel.app/"
-    },
-    {
-      title: "Trading Landing Page",
-      description: "A fully responsive landing page coded from Figma using Next.js and Tailwind CSS, designed for trading businesses.",
-      tech: ["Next.js", "Typescript", "CSS", "Tailwind"],
-      github: "https://github.com/developernayeemx/trading_landing_page",
-      live: "https://trading-landing-page-one.vercel.app/"
-    },
-    {
-      title: "Evogym Application",
-      description: "A gym application website built with React and Tailwind CSS, allowing users to apply and register seamlessly.",
-      tech: ["React", "CSS", "Tailwind"],
-      github: "https://github.com/developernayeemx/EVOGYM_APPLICATION_WEBSITE",
-      live: "https://evogym-application-website.vercel.app/"
-    },
-    {
-      title: "Flavor Finder Website",
-      description: "A recipe website built with React and Tailwind CSS, featuring category filters and video tutorials for creating a variety of dishes.",
-      tech: ["React", "Router", "API", "Tailwind"],
-      github: "https://github.com/developernayeemx/FLAVORFINDER_UI_WEBSITE",
-      live: "https://flavorfinder-ui-website-crf1.vercel.app/"
-    },
-    {
-      title: "Movies Website",
-      description: "A dynamic entertainment platform built with React and Tailwind CSS, displaying API-driven data for movies and TV shows, including Now Playing, and Popular sections.",
-      tech: ["React", "API", "Typescript", "Tailwind"],
-      github: "https://github.com/developernayeemx/MOVIES_WEBSITE_PROJECT",
-      live: "https://movies-website-project-seven.vercel.app/"
-    },
-    {
-      title: "Foods Website",
-      description: "A full-featured food ordering platform, including search, cart, user authentication, order confirmation, and detailed order management.",
-      tech: ["React", "Firebase", "API", "Tailwind"],
-      github: "https://github.com/developernayeemx/FOOD_DELIVERY_WEBSITE_PROJECT",
-      live: "https://food-delivery-website-07.netlify.app/"
-    },
-    {
-      title: "FoxAI Landing Page",
-      description: "A fully responsive landing page coded from Figma using Next.js and Tailwind CSS, designed with modern layouts and smooth user experience.",
-      tech: ["Next.js", "Typescript", "CSS", "Tailwind"],
-      github: "https://github.com/developernayeemx/foxai",
-      live: "https://e-eight-market.vercel.app/"
-    },
-    {
-      title: "E-Eight-Market Dashboard",
-      description: "A modern, fully responsive trading dashboard built from a Figma design using Next.js, TypeScript, Tailwind CSS, and GSAP. Features interactive charts, account analytics, performance metrics, and a clean dark-themed UI with smooth animations.",
-      tech: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP"],
-      github: "https://github.com/developernayeemx/eEightMarket",
-      live: "https://e-eight-market.vercel.app/"
-    },
-    {
-      title: "Bester Landing Page",
-      description: "A modern, fully responsive SaaS landing page developed from a Figma design using React, Vite, and Tailwind CSS. Features a clean UI, pixel-perfect implementation, reusable components, and optimized performance across all devices.",
-      tech: ["React.js", "Vite", "Tailwind CSS"],
-      github: "https://github.com/developernayeemx/bester",
-      live: "https://bester-alpha.vercel.app/"
-    },
-    {
-      title: "ZOG Dashboard",
-      description: "A modern and fully responsive dashboard built from a Figma design using React, Vite, Tailwind CSS, and GSAP. Features a clean admin interface, order management, user listings, sidebar navigation, and smooth animations for an intuitive user experience.",
-      tech: ["React.js", "Tailwind CSS", "GSAP", "React Router"],
-      github: "https://github.com/developernayeemx/zog",
-      live: "https://zog-ruddy.vercel.app/"
-    },
-    {
-      title: "Cryptex Landing Page",
-      description: "A modern Web3 landing page built from a Figma design using React, Vite, Tailwind CSS, GSAP, and Lenis. Features pixel-perfect implementation, responsive layouts, smooth scrolling, engaging animations, and a clean user experience.",
-      tech: ["React.js", "Tailwind CSS", "GSAP", "Lenis"],
-      github: "https://github.com/developernayeemx/cryptex",
-      live: "https://cryptex-six.vercel.app/"
     }
   ].slice(0, 3)
 
