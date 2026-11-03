@@ -105,9 +105,8 @@ function Navbar() {
             <div className="flex items-center space-x-4">
               <a
                 className="hidden lg:block bg-secondary text-primary font-semibold px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-all"
-                href="/Nayeem_Frontend_Developer_CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/Shanto_Full_Stack_Developer_Resume.pdf"
+                download="Shanto_Full_Stack_Developer_Resume.pdf"
               >
                 Download CV
               </a>
@@ -177,9 +176,8 @@ function Navbar() {
                     >
                       <a
                         className="block text-center bg-secondary text-primary font-semibold px-4 py-2 rounded-lg cursor-pointer"
-                        href="/Nayeem_Frontend_Developer_CV.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="/Shanto_Full_Stack_Developer_Resume.pdf"
+                        download="Shanto_Full_Stack_Developer_Resume.pdf"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         Download CV

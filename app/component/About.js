@@ -203,7 +203,8 @@ const About = () => {
 
             <motion.a
               className="text-[12px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] flex cursor-pointer items-center gap-1 md:gap-2 bg-secondary text-primary font-semibold sm:py-2.5 py-2 px-4 sm:px-5 md:py-3 md:px-6 rounded-full shadow-lg"
-              href="/Nayeem_Frontend_Developer_CV.pdf"
+              href="/Shanto_Full_Stack_Developer_Resume.pdf"
+              target="_blank"
               rel="noopener noreferrer"
               whileHover={{
                 scale: 1.05,

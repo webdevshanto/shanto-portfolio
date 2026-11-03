@@ -149,7 +149,7 @@ const Contact = () => {
 
           {/* Resume Badge */}
           <motion.a
-            href="/Nayeem_Frontend_Developer_CV.pdf"
+            href="/Shanto_Full_Stack_Developer_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="relative w-22 h-22 sm:w-24 sm:h-24 md:w-26 md:h-26 lg:w-28 lg:h-28 xl:w-30 xl:h-30 2xl:w-32 2xl:h-32 mt-8 block cursor-pointer group"

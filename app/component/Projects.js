@@ -5,6 +5,9 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Autoplay } from 'swiper/modules'
 import { motion } from "framer-motion"
 import { useRef } from "react"
+import Image from "next/image"
+import portfolioPreview from "./image/portfolio.png"
+import landingPagePreview from "./image/landing_page.png"
 import 'swiper/css'
 import 'swiper/css/pagination'
 
@@ -15,9 +18,10 @@ const Projects = () => {
     {
       title: "Portfolio Website",
       description: "Personal portfolio built with React and Tailwind CSS. Features smooth animations and responsive design.",
-      tech: ["React", "Tailwind", "Gsap"],
-      github: "",
-      live: ""
+      tech: ["React", "Tailwind", "Gsap", "Motion"],
+      image: portfolioPreview,
+      github: "https://github.com/webdevshanto/shanto-portfolio",
+      live: "https://shanto-portfolio-dev.vercel.app/"
     },
     {
       title: "Genesis Landing Page",
@@ -30,8 +34,9 @@ const Projects = () => {
       title: "Business Landing Page",
       description: "A professional landing page built from Figma design using React and Tailwind CSS, focused on responsiveness and modern layout.",
       tech: ["React", "CSS", "Tailwind"],
-      github: "",
-      live: ""
+      image: landingPagePreview,
+      github: "https://github.com/webdevshanto/modern-business-landing-page",
+      live: "https://modern-business-landing-page-gamma-tan.vercel.app/"
     },
     {
       title: "E-commerce Shop",
@@ -205,6 +210,17 @@ const Projects = () => {
                 </span>
                 <span className="h-px flex-1 bg-gray-200 dark:bg-gray-700" />
               </div>
+              {project.image && (
+                <div className="relative mb-5 aspect-video overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700">
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} preview`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover object-top"
+                  />
+                </div>
+              )}
               <div className="flex flex-1 flex-col">
                 <h3 className="mb-3 text-lg font-bold text-gray-900 dark:text-white sm:text-xl">
                   {project.title}
